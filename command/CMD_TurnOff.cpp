@@ -7,7 +7,7 @@ CMD_TurnOff::CMD_TurnOff(SmartObject* target)
 
 bool CMD_TurnOff::Execute()
 {
-    if (target->IsOn) {
+    if (!target->IsOn) {
         std::cout << target->name << " is already off" << std::endl;
         return false;
     }
